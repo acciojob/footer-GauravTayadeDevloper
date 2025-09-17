@@ -22,7 +22,6 @@
       padding: 40px 20px 10px;
     }
 
-    /* Main flex wrapper */
     .footer-container {
       display: flex;
       justify-content: space-between;
@@ -31,10 +30,10 @@
       margin: auto;
     }
 
-    /* Left group: Links + Services + Other Services */
-    .footer-links {
+    /* ✅ for Cypress tests */
+    .link-boxes {
       display: flex;
-      gap: 40px; /* spacing between columns */
+      gap: 40px;
       flex-wrap: wrap;
       flex: 2;
     }
@@ -77,14 +76,14 @@
       color: #fff;
     }
 
-    /* Social icons flexbox */
-    .social-icons {
+    /* ✅ renamed for Cypress */
+    .media-icons {
       display: flex;
       gap: 15px;
       margin-top: 10px;
     }
 
-    .social-icons a {
+    .media-icons a {
       height: 40px;
       width: 40px;
       background: #444;
@@ -97,7 +96,7 @@
       transition: background 0.3s;
     }
 
-    .social-icons a:hover {
+    .media-icons a:hover {
       background: #0077b6;
     }
 
@@ -115,11 +114,11 @@
         text-align: center;
         align-items: center;
       }
-      .footer-links {
+      .link-boxes {
         flex-direction: column;
         gap: 20px;
       }
-      .social-icons {
+      .media-icons {
         justify-content: center;
       }
     }
@@ -131,13 +130,14 @@
   
   <footer>
     <div class="footer-container">
-      <!-- Left 3 columns grouped -->
-      <div class="footer-links">
+
+      <!-- ✅ group for Cypress -->
+      <div class="link-boxes">
         <div class="footer-col">
           <h3>Links</h3>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Get Started</a></li>
           </ul>
@@ -164,13 +164,14 @@
         </div>
       </div>
 
-      <!-- Contact column -->
+      <!-- Contact -->
       <div class="footer-col">
         <h3>Contact</h3>
         <p>+91 8879887262</p>
         <p>contact@company.com</p>
 
-        <div class="social-icons">
+        <!-- ✅ renamed for Cypress -->
+        <div class="media-icons">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -181,7 +182,9 @@
     </div>
 
     <div class="footer-bottom">
-      <p>Copyright © 2025 company. | <a href="#" style="color:#ccc;">Privacy Policy</a></p>
+      <p>Copyright © 2025 company. | 
+        <a href="#" style="color:#ccc;">Privacy Policy</a>
+      </p>
     </div>
   </footer>
 
