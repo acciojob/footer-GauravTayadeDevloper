@@ -1,35 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Footer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #ccc;
+    }
 
-  <body>
-    <footer>
-      <div class="content">
-        <div class="top">
-          <div class="logo-details">
-            <span class="logo_name">company</span>
-          </div>
-          <div class="media-icons">
-            <!-- your code here -->
-          </div>
+    footer {
+      background: #000;
+      color: #ccc;
+      padding: 40px 20px 10px;
+    }
+
+    /* Main flex wrapper */
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Left group: Links + Services + Other Services */
+    .footer-links {
+      display: flex;
+      gap: 40px; /* spacing between columns */
+      flex-wrap: wrap;
+      flex: 2;
+    }
+
+    .footer-col {
+      min-width: 180px;
+    }
+
+    .footer-col h3 {
+      color: #fff;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .footer-col h3::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 50px;
+      height: 2px;
+      background: #fff;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin: 8px 0;
+    }
+
+    .footer-col ul li a {
+      text-decoration: none;
+      color: #ccc;
+      transition: color 0.3s;
+    }
+
+    .footer-col ul li a:hover {
+      color: #fff;
+    }
+
+    /* Social icons flexbox */
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      height: 40px;
+      width: 40px;
+      background: #444;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: #0077b6;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 15px;
+      background: #1a1a1a;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .social-icons {
+        justify-content: center;
+      }
+    }
+  </style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+  <footer>
+    <div class="footer-container">
+      <!-- Left 3 columns grouped -->
+      <div class="footer-links">
+        <div class="footer-col">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Get Started</a></li>
+          </ul>
         </div>
-        <div class="link-boxes">
-          <!-- your code here -->
+
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">App Design</a></li>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Logo Design</a></li>
+            <li><a href="#">Banner Design</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Other Services</h3>
+          <ul>
+            <li><a href="#">SEO</a></li>
+            <li><a href="#">Content Marketing</a></li>
+            <li><a href="#">Prints</a></li>
+            <li><a href="#">Social Media</a></li>
+          </ul>
         </div>
       </div>
-      <div class="bottom-details">
-        <!-- your code here -->
+
+      <!-- Contact column -->
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>+91 8879887262</p>
+        <p>contact@company.com</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright © 2025 company. | <a href="#" style="color:#ccc;">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+</body>
 </html>
